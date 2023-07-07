@@ -3,9 +3,9 @@ const fs = require('fs')
 const { generateKeyPairSync } = require('crypto');
 var jwt = require('jsonwebtoken');
 
-// Generate ES256 keys
-const { publicKey, privateKey } = generateKeyPairSync('ec', {
-    namedCurve: 'P-256',
+// Generate RSA keys
+const { publicKey, privateKey } = generateKeyPairSync('rsa', {
+    modulusLength: 2048,
     publicKeyEncoding: {
         type: 'spki',
         format: 'pem'
