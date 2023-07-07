@@ -52,15 +52,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Transaction Details</p>
+        <p>JWT enabled JSON-RPC call to quicknode sol rpc server. Transaction Details:</p>
       </header>
       <body>
-      {!data ? <p>Loading...</p> : <ReactJson
-        src={data}
-        theme="twilight"
-        style={{textAlign: "left"}}
-        className="json-viewer"
-      />}
+      {!data ? <p>Loading...</p> :
+        <ReactJson
+          src={data}
+          theme="twilight"
+          style={{textAlign: "left"}}
+          className="json-viewer"
+        />
+      }
       </body>
     </div>
   );
